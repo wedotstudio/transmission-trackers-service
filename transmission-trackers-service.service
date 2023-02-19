@@ -1,0 +1,15 @@
+[Unit]
+Description=add tracker to torent
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+User=
+Type=oneshot
+#Your WorkingDirectory
+WorkingDirectory=/usr/local/share/transmission-trackers-Service
+ExecStart=/usr/bin/python3 transmission-trackers.py
+
+
+[Install]
+WantedBy=multi-user.target
