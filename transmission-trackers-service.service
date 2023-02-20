@@ -7,7 +7,7 @@ Wants=network-online.target
 User=
 Type=oneshot
 #Your WorkingDirectory
-WorkingDirectory=/usr/local/share/transmission-trackers-Service
+WorkingDirectory=/usr/share/transmission-trackers-service
 ExecStart=/usr/bin/python3 transmission-trackers.py
 
 

@@ -1,5 +1,5 @@
 [Unit]
-Description=add trackers to torrent every 10 minutes
+Description=add trackers to torrent every 4 hours
 
 [Timer]
 OnBootSec=0s
