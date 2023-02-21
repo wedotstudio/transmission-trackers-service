@@ -1,14 +1,14 @@
 [Unit]
-Description=add tracker to torent
+Description=add tracker to torrent
 After=network.target network-online.target
 Wants=network-online.target
 
 [Service]
-User=
+User=patrick
 Type=oneshot
 #Your WorkingDirectory
 WorkingDirectory=/usr/share/transmission-trackers-service
-ExecStart=/usr/bin/python3 transmission-trackers.py
+ExecStart=python3 transmission-trackers-service.py
 
 
 [Install]

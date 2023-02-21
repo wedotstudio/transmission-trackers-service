@@ -4,24 +4,10 @@ from argparse import ArgumentParser
 from distutils.spawn import find_executable
 from urllib import request
 
-from packaging.version import parse
-
 # check if transmission is installed
 
 if find_executable("transmission-gtk") is None:
     print("Transmission is not installed")
-    exit(1)
-
-# check if transmission is higher or equal to version 4.0.0
-result = subprocess.run(['transmission-gtk', '-v'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-result_str = result.stdout.decode('utf-8')
-version = re.findall(r'\d\.\d\.\d', str(result_str))
-if version is None:
-    print("Transmission seems to be installed but version could not be found")
-    exit(1)
-
-if parse(version[0]) < parse('4.0.0'):
-    print("Transmission version is too low")
     exit(1)
     
 argparser = ArgumentParser(description='Transmission tracker updater')

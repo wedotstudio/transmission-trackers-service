@@ -6,11 +6,16 @@ An automatic tracker addition service for Transmission 4.0 on Linux. this is ins
 
 You need the following dependencies to install this project:
 * [Transmission](https://transmissionbt.com/) 4.0 or higher
-* Python 3 and Python 3 `packaging` module (Usually already installed by `python3-setuptools` package)
+* Python 3
 
 To install, run:
 ```bash
 sudo make install
+```
+
+To start the service, run:
+```bash
+sudo make enable_service
 ```
 
 To uninstall, run:

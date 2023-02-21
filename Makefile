@@ -8,10 +8,10 @@ PREFIX_NAME = transmission-trackers-service
 all: install
 
 install: service_install
-	install -Dm 755 $(PREFIX_NAME).py $(DESTDIR)$(PREFIX)/share/transmission-trackers-service
+	install -Dm 755 $(PREFIX_NAME).py $(DESTDIR)$(PREFIX)/share/transmission-trackers-service/$(PREFIX_NAME).py
 
 uninstall: service_uninstall
-	rm -f $(DESTDIR)$(PREFIX)/share/$(PREFIX_NAME)/*.sh
+	rm -f $(DESTDIR)$(PREFIX)/share/$(PREFIX_NAME)/*.py
 
 service_install:
 	install -Dm 644 $(PREFIX_NAME).service $(DESTDIR)/etc/systemd/system
